@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NimbusWorld – English Mastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ---- PAGE-SPECIFIC STYLES ---- */
+
+    /* Breadcrumb */
+    .em-breadcrumb {
+      padding: 10px 48px;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font);
+      border-bottom: 1px solid var(--border-light);
+      background: var(--white);
+    }
+    .em-breadcrumb a { color: var(--text-muted); }
+    .em-breadcrumb a:hover { color: var(--text-dark); }
+    .em-breadcrumb span { margin: 0 5px; }
+
+    /* ---- HERO ---- */
+    .em-hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      padding: 56px 48px 48px;
+      background: #eaf0f8;
+      align-items: start;
+    }
+
+    .em-hero-left .em-label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 14px;
+    }
+
+    .em-hero-left h1 {
+      font-family: var(--font-serif);
+      font-size: 46px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .em-hero-left p {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 420px;
+      font-weight: 300;
+      margin-bottom: 28px;
+    }
+
+    .em-hero-left .btn-find {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 3px;
+      font-family: var(--font);
+      transition: background 0.2s;
+    }
+    .em-hero-left .btn-find:hover { background: #1a3050; }
+
+    /* Course index card (right side) */
+    .em-course-index {
+      background: var(--navy);
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .em-course-index .index-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--font);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .em-index-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.15s;
+    }
+    .em-index-item:last-child { border-bottom: none; }
+
+    .em-index-num {
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 700;
+      font-family: var(--font);
+      min-width: 20px;
+      margin-top: 1px;
+    }
+
+    .em-index-info h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      font-family: var(--font);
+      margin-bottom: 2px;
+    }
+
+    .em-index-info span {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--font);
+    }
+
+    /* ---- PATHWAY SECTION ---- */
+    .em-pathway {
+      padding: 60px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .em-pathway .em-label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 10px;
+    }
+
+    .em-pathway h2 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .em-pathway .em-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      font-weight: 300;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+
+    /* 2-col course cards grid */
+    .em-courses-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      border: 1px solid #d8e4f0;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #d8e4f0;
+    }
+
+    .em-course-card {
+      background: #eaf0f8;
+      padding: 28px;
+      border-right: 1px solid #d8e4f0;
+      border-bottom: 1px solid #d8e4f0;
+    }
+
+    .em-course-card:nth-child(2n) { border-right: none; }
+    .em-course-card:nth-child(3),
+    .em-course-card:nth-child(4) { border-bottom: none; }
+
+    .em-course-code {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: var(--font);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .em-course-card h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .em-course-hours {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font);
+      margin-bottom: 10px;
+    }
+
+    .em-course-for {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-body);
+      font-family: var(--font);
+      margin-bottom: 12px;
+    }
+
+    .em-course-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .em-course-card ul li {
+      font-size: 12.5px;
+      color: var(--text-body);
+      font-family: var(--font);
+      font-weight: 300;
+      padding: 3px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      line-height: 1.5;
+    }
+
+    .em-course-card ul li::before {
+      content: '·';
+      color: var(--navy);
+      font-weight: 700;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    .em-ask-link {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      font-family: var(--font);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-top: 1px solid var(--border-light);
+      padding-top: 14px;
+      width: 100%;
+      transition: gap 0.2s;
+    }
+    .em-ask-link:hover { gap: 8px; }
+
+    /* ---- COMPARISON TABLE SECTION ---- */
+    .em-comparison {
+      padding: 60px 48px;
+      background: #eaf0f8;
+      border-top: 1px solid #d8e4f0;
+    }
+
+    .em-comparison .em-label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 10px;
+    }
+
+    .em-comparison h2 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 32px;
+    }
+
+    .em-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font);
+      font-size: 13px;
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+
+    .em-table thead tr {
+      background: var(--white);
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .em-table thead th {
+      padding: 12px 20px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .em-table tbody tr {
+      border-bottom: 1px solid var(--border-light);
+      transition: background 0.15s;
+    }
+    .em-table tbody tr:last-child { border-bottom: none; }
+    .em-table tbody tr:hover { background: #fafbfc; }
+
+    .em-table tbody td {
+      padding: 14px 20px;
+      color: var(--text-body);
+      font-weight: 300;
+    }
+
+    .em-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .em-table-note {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 14px;
+      font-style: italic;
+      font-family: var(--font);
+    }
+
+    /* ---- SKILLS SECTION — DARK ---- */
+    .em-skills {
+      background: var(--navy);
+      padding: 60px 48px;
+    }
+
+    .em-skills .em-label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 14px;
+    }
+
+    .em-skills h2 {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 48px;
+      max-width: 500px;
+    }
+
+    .em-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+
+    .em-skill h4 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 10px;
+    }
+
+    .em-skill h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      font-family: var(--font);
+      margin-bottom: 10px;
+    }
+
+    .em-skill p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      font-family: var(--font);
+      font-weight: 300;
+    }
+
+    .em-skills-note {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      font-family: var(--font);
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    /* ---- CTA BAR ---- */
+    .em-cta {
+      background: #eaf0f8;
+      padding: 44px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      border-top: 1px solid #d8e4f0;
+      border-bottom: 1px solid #d8e4f0;
+    }
+
+    .em-cta h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .em-cta p {
+      font-size: 13px;
+      color: var(--text-body);
+      font-weight: 300;
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    .em-cta .cta-note {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    /* ---- FOOTER ---- */
+    .em-footer {
+      background: var(--navy-dark);
+      padding: 44px 48px 20px;
+    }
+
+    .em-footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 48px;
+      margin-bottom: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .em-footer-brand .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .em-footer-brand .brand-name {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: var(--font);
+    }
+    .em-footer-brand .brand-name .p1 { color: var(--white); }
+    .em-footer-brand .brand-name .p2 { color: var(--gold); }
+
+    .em-footer-brand .tagline {
+      font-size: 12px;
+      color: var(--gold);
+      font-style: italic;
+      font-family: var(--font-serif);
+      margin-bottom: 10px;
+    }
+
+    .em-footer-brand p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.65;
+      font-family: var(--font);
+      font-weight: 300;
+      max-width: 220px;
+    }
+
+    .em-footer-col h4 {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+      font-family: var(--font);
+      margin-bottom: 14px;
+    }
+
+    .em-footer-col p {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      font-family: var(--font);
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    .em-footer-col p strong { color: var(--white); font-weight: 600; font-size: 20px; }
+
+    .em-footer-col a {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--gold);
+      font-family: var(--font);
+      margin-bottom: 6px;
+    }
+
+    .em-footer-col a.muted {
+      color: rgba(255,255,255,0.3);
+      font-size: 11px;
+    }
+
+    .em-footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .em-footer-bottom p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      font-family: var(--font);
+    }
+
+    @media (max-width: 900px) {
+      .em-hero { grid-template-columns: 1fr; }
+      .em-courses-grid { grid-template-columns: 1fr; }
+      .em-skills-grid { grid-template-columns: 1fr 1fr; }
+      .em-footer-grid { grid-template-columns: 1fr 1fr; }
+      .em-cta { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .em-hero, .em-pathway, .em-comparison, .em-skills, .em-cta, .em-footer { padding-left: 20px; padding-right: 20px; }
+      .em-skills-grid { grid-template-columns: 1fr; }
+      .em-footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="16" r="12" fill="none" stroke="#c9a84c" stroke-width="1.4"/>
+        <ellipse cx="18" cy="16" rx="6" ry="12" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
+        <line x1="6" y1="16" x2="30" y2="16" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
+        <line x1="8" y1="10" x2="28" y2="10" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+        <line x1="8" y1="22" x2="28" y2="22" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+        <path d="M11 25 L11 8 L23 25 L23 8" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M7 8 Q18 2 29 8" stroke="#c9a84c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="29" cy="8" r="1.8" fill="#c9a84c"/>
+        <path d="M6 29 Q18 25 30 29" stroke="#c9a84c" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <line x1="18" y1="25" x2="18" y2="30" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <div class="nav-logo-text">
+        <div class="nav-logo-name"><span class="part1">NIMBUS</span><span class="part2">WORLD</span></div>
+        <div class="nav-logo-sub">Education Consultancy</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="english-mastery.html" class="active">English mastery</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="personality-career.html">Personality &amp; careers</a></li>
+      <li><a href="learning-parents.html">Learning &amp; parents</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a consulting →</a>
+    </div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="em-breadcrumb">
+    <a href="index.html">Home</a><span>›</span><a href="english-mastery.html">English mastery</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="em-hero">
+    <div class="em-hero-left">
+      <p class="em-label">Your English Journey</p>
+      <h1>Find your voice.<br>Build your English.</h1>
+      <p>Four progressive, handbook-based courses for everyday, academic and workplace communication. Start at your level.</p>
+      <a href="#pathway" class="btn-find">Find my starting level →</a>
+    </div>
+
+    <!-- Course index card -->
+    <div class="em-course-index">
+      <p class="index-label">Your NimbusWorld Programme</p>
+
+      <div class="em-index-item">
+        <div class="em-index-num">01</div>
+        <div class="em-index-info">
+          <h4>Foundation</h4>
+          <span>40 hours recommended</span>
+        </div>
+      </div>
+      <div class="em-index-item">
+        <div class="em-index-num">02</div>
+        <div class="em-index-info">
+          <h4>Communication</h4>
+          <span>50 hours recommended</span>
+        </div>
+      </div>
+      <div class="em-index-item">
+        <div class="em-index-num">03</div>
+        <div class="em-index-info">
+          <h4>Professional</h4>
+          <span>60 hours recommended</span>
+        </div>
+      </div>
+      <div class="em-index-item">
+        <div class="em-index-num">04</div>
+        <div class="em-index-info">
+          <h4>Global communication</h4>
+          <span>60 hours recommended</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PATHWAY / COURSE CARDS ===== -->
+  <section class="em-pathway" id="pathway">
+    <p class="em-label">The Four Level Pathway</p>
+    <h2>Start where you are. Go further.</h2>
+    <p class="em-desc">A short speaking, listening, reading and writing diagnostic helps identify your entry level.</p>
+
+    <div class="em-courses-grid">
+
+      <!-- NWE-101 -->
+      <div class="em-course-card">
+        <p class="em-course-code">NWE-101 · Level 1</p>
+        <h3>English Foundation</h3>
+        <p class="em-course-hours">40 hours recommended</p>
+        <p class="em-course-for">For beginners and hesitant speakers.</p>
+        <ul>
+          <li>Basic sentences and everyday vocabulary</li>
+          <li>Clear pronunciation and simple conversations</li>
+          <li>Simple reading and writing</li>
+        </ul>
+        <a href="contact.html" class="em-ask-link">Ask about NWE-101 →</a>
+      </div>
+
+      <!-- NWE-201 -->
+      <div class="em-course-card">
+        <p class="em-course-code">NWE-201 · Level 2</p>
+        <h3>English Communication</h3>
+        <p class="em-course-hours">50 hours recommended</p>
+        <p class="em-course-for">For learners with basic English who need fluency.</p>
+        <ul>
+          <li>Longer conversations and explaining opinions</li>
+          <li>Listening practice and group discussion</li>
+          <li>Speaking with greater clarity and confidence</li>
+        </ul>
+        <a href="contact.html" class="em-ask-link">Ask about NWE-201 →</a>
+      </div>
+
+      <!-- NWE-301 -->
+      <div class="em-course-card">
+        <p class="em-course-code">NWE-301 · Level 3</p>
+        <h3>Professional English</h3>
+        <p class="em-course-hours">60 hours recommended</p>
+        <p class="em-course-for">For graduates and working professionals.</p>
+        <ul>
+          <li>Professional emails and meeting communication</li>
+          <li>Presentations and workplace speaking</li>
+          <li>Resumes and interview communication</li>
+        </ul>
+        <a href="contact.html" class="em-ask-link">Ask about NWE-301 →</a>
+      </div>
+
+      <!-- NWE-401 -->
+      <div class="em-course-card">
+        <p class="em-course-code">NWE-401 · Level 4</p>
+        <h3>Advanced English &amp;<br>Global Communication</h3>
+        <p class="em-course-hours">60 hours recommended</p>
+        <p class="em-course-for">For independent speakers seeking advanced skills.</p>
+        <ul>
+          <li>Persuasive speaking and nuanced writing</li>
+          <li>Debates, negotiation and presentations</li>
+          <li>Cross-cultural communication</li>
+        </ul>
+        <a href="contact.html" class="em-ask-link">Ask about NWE-401 →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON TABLE ===== -->
+  <section class="em-comparison">
+    <p class="em-label">Compare at a glance</p>
+    <h2>Your starting level, made clearer.</h2>
+
+    <table class="em-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Recommended hours</th>
+          <th>Starting point</th>
+          <th>Primary focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NWE-101</td>
+          <td>40 hours</td>
+          <td>Beginners / hesitant speakers</td>
+          <td>Everyday foundations</td>
+        </tr>
+        <tr>
+          <td>NWE-201</td>
+          <td>50 hours</td>
+          <td>Basic English</td>
+          <td>Conversations &amp; fluency</td>
+        </tr>
+        <tr>
+          <td>NWE-301</td>
+          <td>60 hours</td>
+          <td>Graduates / professionals</td>
+          <td>Workplace communication</td>
+        </tr>
+        <tr>
+          <td>NWE-401</td>
+          <td>60 hours</td>
+          <td>Independent speakers</td>
+          <td>Advanced &amp; global communication</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="em-table-note">Recommended teaching hours are guidance, not a guaranteed completion time. Learners may enter at the appropriate level.</p>
+  </section>
+
+  <!-- ===== SKILLS — DARK SECTION ===== -->
+  <section class="em-skills">
+    <p class="em-label">Practice that builds confidence</p>
+    <h2>More than a level.<br>Skills you can use.</h2>
+
+    <div class="em-skills-grid">
+      <div class="em-skill">
+        <h4>#1 Baseline</h4>
+        <h3>Understand your starting point</h3>
+        <p>A short diagnostic across speaking, listening, reading and writing.</p>
+      </div>
+      <div class="em-skill">
+        <h4>#2 Practice</h4>
+        <h3>Apply what you learn</h3>
+        <p>Conversations, written tasks, presentations and course-appropriate activities.</p>
+      </div>
+      <div class="em-skill">
+        <h4>#3 Review</h4>
+        <h3>See your next step</h3>
+        <p>Competency assessment and course-specific feedback to guide further learning.</p>
+      </div>
+    </div>
+
+    <p class="em-skills-note">No IELTS, TOEFL or PTE score guarantee. Ask the team about current delivery, assessment and certificate terms.</p>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="em-cta">
+    <div>
+      <h2>Your next chapter starts with a conversation.</h2>
+      <p>Tell us your goals. Our Pune team can help you explore a suitable learning path.</p>
+      <p class="cta-note">Batches, fees and availability are confirmed by the admitted team.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="white-space:nowrap; padding:13px 28px; font-size:14px;">Book a consulting →</a>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="em-footer">
+    <div class="em-footer-grid">
+
+      <div class="em-footer-brand">
+        <div class="footer-logo-wrap">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0;">
+            <circle cx="18" cy="16" r="12" fill="none" stroke="#c9a84c" stroke-width="1.4"/>
+            <ellipse cx="18" cy="16" rx="6" ry="12" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
+            <line x1="6" y1="16" x2="30" y2="16" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
+            <path d="M11 25 L11 8 L23 25 L23 8" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M7 8 Q18 2 29 8" stroke="#c9a84c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <circle cx="29" cy="8" r="1.8" fill="#c9a84c"/>
+          </svg>
+          <div class="brand-name"><span class="p1">NIMBUS</span><span class="p2">WORLD</span></div>
+        </div>
+        <div class="tagline">Discover. Decide. Develop.</div>
+        <p>Education and course guidance,<br>from Pune to new possibilities.</p>
+      </div>
+
+      <div class="em-footer-col">
+        <h4>Pune Centre</h4>
+        <p>Pune Global School, 9 A Bhagyanagar,<br>
+        Bhosewadi-Kolshet Road, Opp. Khushboo Hotel,<br>
+        Behind Axis Bank, Bhosewadi, Pune,<br>
+        Maharashtra 411027</p>
+      </div>
+
+      <div class="em-footer-col">
+        <h4>Let's Connect</h4>
+        <p><strong>+91 73789 70701</strong></p>
+        <p style="font-size:11px; color:rgba(255,255,255,0.3);">Mon–Sat · 09:00 AM–08:00 PM</p>
+        <a href="contact.html">WhatsApp consultation →</a><br>
+        <a href="mailto:hello@nimbusworld.in" class="muted">Email address to be confirmed</a>
+      </div>
+
+    </div>
+    <div class="em-footer-bottom">
+      <p>© NIMBUSWORLD 2026 · NimbusWorld Education Consultancy Private Limited</p>
+      <p>Pune, Maharashtra, India</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
