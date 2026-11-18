@@ -1,7 +1,7 @@
-/* ========== GOOGLE FONTS ========== */
+/* google cha font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ========== GLOBAL RESET & BASE ========== */
+/* global reset and base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +44,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ========== NAVBAR ========== */
+/* this is navbar */
 .navbar {
   background: var(--navy-dark);
   padding: 0 40px;
@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-/* ---- Logo ---- */
+/* logo */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@ img { max-width: 100%; display: block; }
   margin-top: 1px;
 }
 
-/* ---- Nav links ---- */
+/* nav link*/
 .nav-links {
   display: flex;
   gap: 24px;
@@ -125,7 +125,7 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
-/* ---- Nav actions ---- */
+/* nav action */
 .nav-actions {
   display: flex;
   gap: 10px;
@@ -133,7 +133,7 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-/* Footer logo sizing */
+/* footer logo chi size */
 .footer-brand .footer-logo {
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
-/* ========== BUTTONS ========== */
+/* buttons */
 .btn {
   display: inline-block;
   padding: 9px 22px;
@@ -205,7 +205,7 @@ img { max-width: 100%; display: block; }
   color: var(--white);
   border: none;
 }
-.btn-primary:hover { background: #163f75; }
+.btn-primary:hover { background: #167573; }
 
 .btn-gold {
   background: var(--gold);
@@ -230,7 +230,7 @@ img { max-width: 100%; display: block; }
 
 .btn-sm { padding: 7px 18px; font-size: 12px; }
 
-/* ========== HERO — DARK NAVY ========== */
+/* hero cha color  */
 .hero {
   background: var(--navy);
   display: grid;
@@ -344,7 +344,7 @@ img { max-width: 100%; display: block; }
   color: #666;
 }
 
-/* ========== STATS STRIP ========== */
+/* stats strip */
 .stats-strip {
   background: var(--white);
   border-bottom: 1px solid var(--border-light);
@@ -380,7 +380,7 @@ img { max-width: 100%; display: block; }
   max-width: 120px;
 }
 
-/* ========== SECTIONS ========== */
+/* sections */
 .section {
   padding: 72px 48px;
 }
@@ -419,7 +419,7 @@ img { max-width: 100%; display: block; }
 
 .section-desc.light { color: rgba(255,255,255,0.65); }
 
-/* ========== PROGRAMMES GRID (3 col) ========== */
+/* programes che grid */
 .programmes-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -486,7 +486,7 @@ img { max-width: 100%; display: block; }
 
 .explore-link:hover { gap: 10px; }
 
-/* ========== WHY SECTION — 2 COL ========== */
+/* why section class*/
 .why-section {
   background: var(--navy-dark);
   padding: 72px 48px;
@@ -561,7 +561,7 @@ img { max-width: 100%; display: block; }
   font-weight: 300;
 }
 
-/* ========== LEARNING JOURNEY — LIGHT SECTION ========== */
+/* learning jorney */
 .journey-section {
   background: var(--off-white);
   padding: 72px 48px;
@@ -601,7 +601,7 @@ img { max-width: 100%; display: block; }
   font-weight: 300;
 }
 
-/* ========== PARENTS SECTION — DARK ========== */
+/* parent section */
 .parents-section {
   background: var(--navy);
   padding: 72px 48px;
@@ -683,7 +683,7 @@ img { max-width: 100%; display: block; }
   min-width: 16px;
 }
 
-/* ========== CTA CONVERSATION ========== */
+/* cta */
 .cta-conversation {
   background: var(--light-gray);
   padding: 48px 48px;
@@ -712,10 +712,11 @@ img { max-width: 100%; display: block; }
   font-weight: 300;
 }
 
-/* ========== FOOTER ========== */
+/* footer */
 footer {
-  background: var(--navy-dark);
+  background: #f0f4f8;
   padding: 52px 48px 24px;
+  border-top: 3px solid var(--gold);
 }
 
 .footer-grid {
@@ -724,8 +725,13 @@ footer {
   gap: 48px;
   margin-bottom: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid #d8e2ed;
 }
+
+
+.footer-brand .footer-logo .part1 { color: var(--navy) !important; }
+.footer-brand .footer-logo .part2 { color: var(--gold) !important; }
+.footer-brand .footer-logo .nav-logo-sub { color: var(--text-muted) !important; }
 
 .footer-brand .footer-tagline {
   font-size: 12px;
@@ -737,7 +743,7 @@ footer {
 
 .footer-brand p {
   font-size: 12px;
-  color: rgba(255,255,255,0.4);
+  color: var(--text-body);
   line-height: 1.65;
   max-width: 220px;
   font-family: var(--font);
@@ -746,17 +752,17 @@ footer {
 
 .footer-col h4 {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: var(--navy);
   margin-bottom: 16px;
   font-family: var(--font);
 }
 
 .footer-col p {
   font-size: 13px;
-  color: rgba(255,255,255,0.65);
+  color: var(--text-body);
   line-height: 1.7;
   margin-bottom: 10px;
   font-family: var(--font);
@@ -764,20 +770,20 @@ footer {
 }
 
 .footer-col p strong {
-  color: var(--white);
-  font-weight: 600;
+  color: var(--navy);
+  font-weight: 700;
 }
 
 .footer-col a {
   font-size: 12px;
-  color: rgba(255,255,255,0.45);
+  color: var(--blue-accent);
   display: block;
   margin-bottom: 8px;
   transition: color 0.2s;
   font-family: var(--font);
 }
 
-.footer-col a:hover { color: var(--white); }
+.footer-col a:hover { color: var(--navy); }
 
 .footer-bottom {
   display: flex;
@@ -787,7 +793,7 @@ footer {
 
 .footer-bottom p {
   font-size: 11px;
-  color: rgba(255,255,255,0.25);
+  color: var(--text-muted);
 }
 
 .footer-bottom-links {
@@ -797,13 +803,13 @@ footer {
 
 .footer-bottom-links a {
   font-size: 11px;
-  color: rgba(255,255,255,0.3);
+  color: var(--text-muted);
   transition: color 0.2s;
 }
 
-.footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+.footer-bottom-links a:hover { color: var(--navy); }
 
-/* ========== INNER PAGE SHARED ========== */
+/* inner page */
 .page-intro {
   background: var(--off-white);
   padding: 14px 48px;
@@ -847,7 +853,7 @@ footer {
   filter: brightness(0.65);
 }
 
-/* inner sections on white bg */
+/* inner sections */
 .inner-section {
   padding: 64px 48px;
   background: var(--white);
@@ -857,7 +863,7 @@ footer {
 .inner-section.gray { background: var(--off-white); }
 .inner-section.dark { background: var(--navy); }
 
-/* cards on white bg */
+/* cards grid */
 .cards-grid-light {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -998,7 +1004,7 @@ footer {
 
 .faq-item.open .faq-answer { display: block; }
 
-/* testimonials */
+/* testimonials grid */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1221,7 +1227,7 @@ footer {
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-/* ========== RESPONSIVE ========== */
+/* responsive */
 @media (max-width: 1024px) {
   .navbar, .section, .hero-left, .lang-hero-content { padding-left: 28px; padding-right: 28px; }
   .hero { grid-template-columns: 1fr; }
@@ -1248,13 +1254,12 @@ footer {
   .section { padding: 48px 20px; }
 }
 
-/* ============================================================
-   MOBILE RESPONSIVE — added for small screen support
-   All existing desktop styles are preserved above.
-   These rules only apply at ≤768px and ≤480px.
-   ============================================================ */
+/* 
+   MOBILE RESPONSIVE — lahan screeen sathi support add kela ahe
 
-/* ── Hamburger button (hidden on desktop) ── */
+   */
+
+/*  Hamburger button (hidden on desktop)  */
 .nav-hamburger {
   display: none;
   flex-direction: column;
