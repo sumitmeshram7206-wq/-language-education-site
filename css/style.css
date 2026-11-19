@@ -714,7 +714,7 @@ img { max-width: 100%; display: block; }
 
 /* footer */
 footer {
-  background: #f0f4f8;
+  background: #f5f5f0;
   padding: 52px 48px 24px;
   border-top: 3px solid var(--gold);
 }

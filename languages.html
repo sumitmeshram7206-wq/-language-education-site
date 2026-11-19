@@ -12,7 +12,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a2e; }
 
-    /* ── BREADCRUMB ── */
+    /* this is breadcrumb */
     .gl-breadcrumb {
       padding: 10px 48px;
       font-size: 11px;
@@ -24,7 +24,7 @@
     .gl-breadcrumb a { color: #8ca0b8; text-decoration: none; }
     .gl-breadcrumb span { margin: 0 5px; }
 
-    /* ── HERO ── */
+    /* ── hero ── */
     .gl-hero {
       background: var(--navy, #0d1b2a);
       padding: 56px 48px 52px;
@@ -68,7 +68,7 @@
     }
     .gl-hero-left .gl-explore-link:hover { gap: 10px; }
 
-    /* Hello world card */
+    /* world card */
     .gl-hello-card {
       background: #122236;
       border-radius: 50%;
@@ -108,7 +108,7 @@
       line-height: 1.5;
     }
 
-    /* ── LANGUAGE ROWS ── */
+    /* languages che rows */
     .gl-languages {
       padding: 0 48px;
       background: #fff;
@@ -139,7 +139,7 @@
       display: block;
     }
 
-    /* Content */
+    /* this is content */
     .gl-lang-content .gl-row-label {
       font-size: 10px;
       letter-spacing: 2px;
@@ -238,7 +238,7 @@
       min-width: 80px;
     }
 
-    /* ── CTA BAR ── */
+    /* cta bar */
     .gl-cta {
       background: #eaf0f8;
       padding: 44px 48px;
@@ -291,9 +291,9 @@
     }
     .gl-cta-btn:hover { background: #163f75; }
 
-    /* ── FOOTER ── */
+    /* footer */
     .gl-footer {
-      background: #091422;
+      background: #faf9f1;
       padding: 44px 48px 20px;
     }
 
@@ -406,7 +406,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- navbaar -->
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
       <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -439,12 +439,12 @@
     </div>
   </nav>
 
-  <!-- ===== BREADCRUMB ===== -->
+  <!-- this is breadcrumb -->
   <div class="gl-breadcrumb">
     <a href="index.html">Home</a><span>›</span><span>Global Languages</span>
   </div>
 
-  <!-- ===== HERO ===== -->
+  <!-- hero -->
   <section class="gl-hero">
     <div class="gl-hero-left">
       <h1>New words.<br>New ways to see the world.</h1>
@@ -452,7 +452,7 @@
       <a href="#languages" class="gl-explore-link">Explore the pathways below ↓</a>
     </div>
 
-    <!-- Hello world circle card -->
+    <!-- hello world cha class -->
     <div class="gl-hello-card">
       <div class="hello">Hello,</div>
       <div class="world">world.</div>
@@ -460,10 +460,10 @@
     </div>
   </section>
 
-  <!-- ===== LANGUAGE ROWS ===== -->
+  <!-- language che rows -->
   <div class="gl-languages" id="languages">
 
-    <!-- ── JAPANESE ── -->
+    <!-- japanese language -->
     <div class="gl-lang-row">
       <div class="gl-lang-img">
         <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=80" alt="Japan - Kyoto temple pagoda" />
@@ -486,7 +486,7 @@
       <div class="gl-script-label">日本語</div>
     </div>
 
-    <!-- ── GERMAN ── -->
+    <!-- german language -->
     <div class="gl-lang-row">
       <div class="gl-lang-img">
         <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Germany - Brandenburg Gate Berlin" />
@@ -509,7 +509,7 @@
       <div class="gl-script-label">Deutsch</div>
     </div>
 
-    <!-- ── MANDARIN ── -->
+    <!-- mandarin language-->
     <div class="gl-lang-row">
       <div class="gl-lang-img">
         <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80" alt="China - Shanghai skyline waterfront" />
@@ -534,7 +534,7 @@
 
   </div>
 
-  <!-- ===== CTA ===== -->
+  <!-- cta -->
   <div class="gl-cta">
     <div>
       <h2>Your next chapter starts with a conversation.</h2>
@@ -544,46 +544,55 @@
     <a href="contact.html" class="gl-cta-btn">Book a consulting →</a>
   </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="gl-footer">
-    <div class="gl-footer-grid">
-
-      <div class="gl-footer-brand">
-        <div class="brand-row">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;flex-shrink:0;">
+  <!-- footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="18" cy="16" r="12" fill="none" stroke="#c9a84c" stroke-width="1.4"/>
             <ellipse cx="18" cy="16" rx="6" ry="12" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
             <line x1="6" y1="16" x2="30" y2="16" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
-            <path d="M11 25 L11 8 L23 25 L23 8" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="8" y1="10" x2="28" y2="10" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+            <line x1="8" y1="22" x2="28" y2="22" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+            <path d="M11 25 L11 8 L23 25 L23 8" stroke="#0d1b2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M7 8 Q18 2 29 8" stroke="#c9a84c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
             <circle cx="29" cy="8" r="1.8" fill="#c9a84c"/>
+            <path d="M6 29 Q18 25 30 29" stroke="#c9a84c" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <line x1="18" y1="25" x2="18" y2="30" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
           </svg>
-          <div class="brand-name"><span class="p1">NIMBUS</span><span class="p2">WORLD</span></div>
+          <div class="nav-logo-text">
+            <div class="nav-logo-name"><span class="part1">NIMBUS</span><span class="part2">WORLD</span></div>
+            <div class="nav-logo-sub">Education Consultancy</div>
+          </div>
         </div>
-        <div class="tagline">Discover. Decide. Develop.</div>
-        <p>Education and course guidance,<br>from Pune to new possibilities.</p>
+        <div class="footer-tagline">Discover. Decide. Develop.</div>
+        <p>Education and study guidance,<br>from Pune to new possibilities.</p>
       </div>
 
-      <div class="gl-footer-col">
+      <div class="footer-col">
         <h4>Pune Centre</h4>
-        <p>Pune Global School, 9 A Bhagyanagar,<br>
-        Bhosewadi-Kolshet Road, Opp. Khushboo Hotel,<br>
-        Behind Axis Bank, Bhosewadi, Pune,<br>
+        <p>Pune Nimbus School, 11 Mhalaspur,<br>
+        Mhalaspur Road, No. 41 Nimbus Road,<br>
+        Nimbus Area Bank, Bhoserwali, Pune,<br>
         Maharashtra 411027</p>
       </div>
 
-      <div class="gl-footer-col">
+      <div class="footer-col">
         <h4>Let's Connect</h4>
         <p><strong>+91 73789 70701</strong></p>
-        <p style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:4px;">Mon–Sat · 09:30 AM–06:30 PM</p>
-        <a href="contact.html">WhatsApp consultation →</a><br>
-        <a href="mailto:hello@nimbusworld.in" class="muted">Email address to be confirmed</a>
+        <p style="font-size:12px; color:var(--text-muted);">Mon–Sat · 09:00 AM–08:00 PM</p>
+        <a href="contact.html">WhatsApp consultations →</a>
+        <a href="mailto:hello@nimbusworld.in" style="color:var(--text-muted); font-size:12px;">Email address to be confirmed</a>
       </div>
-
     </div>
-    <div class="gl-footer-bottom">
-      <p>© NIMBUSWORLD Education Consultancy Private Limited</p>
-      <p>Pune, Maharashtra, India</p>
+
+    <div class="footer-bottom">
+      <p>© NimbusWorld 2026 · NimbusWorld Consultancy Private Limited</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
     </div>
   </footer>
 

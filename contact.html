@@ -12,7 +12,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a2e; }
 
-    /* ── BREADCRUMB ── */
+    /* this is breadcrumb */
     .ct-breadcrumb {
       padding: 10px 48px;
       font-size: 11px;
@@ -24,7 +24,7 @@
     .ct-breadcrumb span { margin: 0 5px; color: #8ca0b8; }
     .ct-breadcrumb .current { color: #3d4a5c; }
 
-    /* ── HERO ── */
+    /* hero */
     .ct-hero {
       background: #0d1b2a;
       padding: 52px 48px 56px;
@@ -49,7 +49,7 @@
       max-width: 440px;
     }
 
-    /* ── CONTACT BODY ── */
+    /* contact body */
     .ct-body {
       background: #fff;
       padding: 0;
@@ -181,7 +181,7 @@
 
     .ct-form label .req { color: #c9a84c; }
 
-    /* Input fields — light blue background */
+    /* Input fields —> light blue background */
     .ct-form input,
     .ct-form select,
     .ct-form textarea {
@@ -268,7 +268,7 @@
     }
     .ct-submit-btn:hover { background: #163f75; }
 
-    /* ── FIND US SECTION ── */
+    /* find us section */
     .ct-find {
       background: #fff;
       padding: 56px 48px;
@@ -357,7 +357,7 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* ── CONTEXT SECTION ── */
+    /* context sction */
     .ct-context {
       background: #eaf0f8;
       padding: 52px 48px;
@@ -400,13 +400,13 @@
     .ct-context-item p {
       font-size: 13px;
       color: #3d4a5c;
-      font-weight: 300;
-      line-height: 1.65;
+      font-weight:   300;
+      line-height:  1.65;
     }
 
-    /* ── FOOTER ── */
+    /* ── footer ── */
     .ct-footer {
-      background: #091422;
+      background: #fafbf6;
       padding: 44px 48px 20px;
     }
 
@@ -530,7 +530,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- navbar -->
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
       <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -563,18 +563,18 @@
     </div>
   </nav>
 
-  <!-- ===== BREADCRUMB ===== -->
+  <!-- this is breadcrumb -->
   <div class="ct-breadcrumb">
     <a href="index.html">Home</a><span>›</span><span class="current">Contact</span>
   </div>
 
-  <!-- ===== HERO ===== -->
+  <!-- hero -->
   <section class="ct-hero">
     <h1>Let's talk about your next chapter.</h1>
     <p>A question about courses, a suitable level or your next learning step?<br>Connect with our Pune team for current information.</p>
   </section>
 
-  <!-- ===== CONTACT BODY ===== -->
+  <!-- contact body -->
   <section class="ct-body">
 
     <!-- Left — contact info -->
@@ -601,7 +601,7 @@
       </div>
     </div>
 
-    <!-- Right — form -->
+    <!-- ct from wrap class-->
     <div class="ct-form-wrap">
       <h3>Book a counselling conversation</h3>
       <p class="form-desc">Share your interests so the team can guide your next step.</p>
@@ -666,7 +666,7 @@
 
   </section>
 
-  <!-- ===== FIND US SECTION ===== -->
+  <!-- find us class -->
   <section class="ct-find">
     <div class="ct-find-left">
       <p class="ct-col-label">Come say hello</p>
@@ -686,7 +686,7 @@
     </div>
   </section>
 
-  <!-- ===== CONTEXT SECTION ===== -->
+  <!-- context cha section -->
   <section class="ct-context">
     <p class="ct-col-label">Before you enquire</p>
     <h2>A little context helps us guide you better.</h2>
@@ -707,46 +707,55 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="ct-footer">
-    <div class="ct-footer-grid">
-
-      <div class="ct-footer-brand">
-        <div class="brand-row">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;flex-shrink:0;">
+  <!-- footer-->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="18" cy="16" r="12" fill="none" stroke="#c9a84c" stroke-width="1.4"/>
             <ellipse cx="18" cy="16" rx="6" ry="12" fill="none" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
             <line x1="6" y1="16" x2="30" y2="16" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
-            <path d="M11 25 L11 8 L23 25 L23 8" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="8" y1="10" x2="28" y2="10" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+            <line x1="8" y1="22" x2="28" y2="22" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+            <path d="M11 25 L11 8 L23 25 L23 8" stroke="#0d1b2a" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M7 8 Q18 2 29 8" stroke="#c9a84c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
             <circle cx="29" cy="8" r="1.8" fill="#c9a84c"/>
+            <path d="M6 29 Q18 25 30 29" stroke="#c9a84c" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <line x1="18" y1="25" x2="18" y2="30" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
           </svg>
-          <div class="brand-name"><span class="p1">NIMBUS</span><span class="p2">WORLD</span></div>
+          <div class="nav-logo-text">
+            <div class="nav-logo-name"><span class="part1">NIMBUS</span><span class="part2">WORLD</span></div>
+            <div class="nav-logo-sub">Education Consultancy</div>
+          </div>
         </div>
-        <div class="tagline">Discover. Decide. Develop.</div>
-        <p>Education and course guidance,<br>from Pune to new possibilities.</p>
+        <div class="footer-tagline">Discover. Decide. Develop.</div>
+        <p>Education and study guidance,<br>from Pune to new possibilities.</p>
       </div>
 
-      <div class="ct-footer-col">
+      <div class="footer-col">
         <h4>Pune Centre</h4>
-        <p>Pune Global School, 9 A Bhagyanagar,<br>
-        Bibwewadi-Kondhwa Road, opp. Khushboo Hotel,<br>
-        behind Axis Bank, Bibwewadi, Pune,<br>
-        Maharashtra 411037</p>
+        <p>Pune Nimbus School, 11 Mhalaspur,<br>
+        Mhalaspur Road, No. 41 Nimbus Road,<br>
+        Nimbus Area Bank, Bhoserwali, Pune,<br>
+        Maharashtra 411027</p>
       </div>
 
-      <div class="ct-footer-col">
+      <div class="footer-col">
         <h4>Let's Connect</h4>
         <p><strong>+91 73789 70701</strong></p>
-        <p style="font-size:11px; color:rgba(255,255,255,0.3); margin-top:4px;">Mon–Sat · 09:30 AM–06:30 PM</p>
-        <a href="https://wa.me/917378970701" target="_blank" rel="noopener">WhatsApp consultation →</a><br>
-        <a href="#" class="muted">Email address to be confirmed</a>
+        <p style="font-size:12px; color:var(--text-muted);">Mon–Sat · 09:00 AM–08:00 PM</p>
+        <a href="https://wa.me/917378970701" target="_blank" rel="noopener">WhatsApp consultations →</a>
+        <a href="mailto:hello@nimbusworld.in" style="color:var(--text-muted); font-size:12px;">Email address to be confirmed</a>
       </div>
-
     </div>
-    <div class="ct-footer-bottom">
-      <p>© NIMBUSWORLD Education Consultancy Private Limited</p>
-      <p>Pune, Maharashtra, India</p>
+
+    <div class="footer-bottom">
+      <p>© NimbusWorld 2026 · NimbusWorld Consultancy Private Limited</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
     </div>
   </footer>
 
